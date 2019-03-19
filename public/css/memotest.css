@@ -1,0 +1,259 @@
+body {
+    margin: 0%;
+    display: flex;
+    font-family: "Comfortaa", cursive;
+    flex-direction: column;
+    justify-content: auto;
+    background-image: url("/assets/images/fondo.jpg");
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    color: deepskyblue;
+    justify-content: center;
+    margin: 0%;
+}
+
+#name {
+    border-color: hotpink;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: solid black 13px;
+    width: 400px;
+    height: 400px;
+    background-color: bisque;
+    margin: 50px auto;
+}
+
+.welcome p {
+    text-align: center;
+}
+
+.welcome .buttons {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome .alertName {
+    background-color: pink;
+    color: palevioletred;
+    size: 20px;
+    width: 300px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.welcome .ups {
+    display: none;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: whitesmoke;
+    width: 250px;
+    height: 30px;
+    margin: 3px;
+    font-family: "Comfortaa", cursive;
+}
+
+.game {
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 13px;
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: rgba(255, 228, 196, 0.568);
+}
+
+.game h1 {
+    text-align: center;
+    margin: 5px;
+}
+
+.game h3 {
+    text-align: center;
+}
+
+.game p {
+    text-align: center;
+}
+
+.game p span {
+    color: deepskyblue;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.cards .cardsImg {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    justify-content: center;
+    border: solid orange;
+}
+
+.cards .cardsImg img {
+    width: 100%;
+}
+
+.lifes {
+    background-color: white;
+    border: solid 5px deepskyblue;
+    border-radius: 5px;
+    width: 700px;
+    margin: 10px;
+}
+
+.lifes p {
+    text-align: center;
+}
+
+.lifes .number {
+    color: orange;
+}
+
+.noPointer {
+    pointer-events: none;
+}
+
+.found {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black 5px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: bisque;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.winner P {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.winner .ranking {
+    width: auto;
+}
+
+.winner .ranking .row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 20px;
+    width: 269px;
+}
+
+.winner div {
+    width: 90px;
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.lost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black 5px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: bisque;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.lost P {
+    text-align: center;
+}
+
+.overlaid {
+    background-color: bisque;
+    opacity: 0.5;
+}
+
+.none {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .welcome {
+        width: 60%;
+    }
+    .welcome p {
+        width: 60%;
+    }
+    .welcome .buttons button {
+        width: 150px;
+    }
+    .welcome .alertName {
+        width: 150px;
+    }
+    .game {
+        width: 60%;
+    }
+    .game h1 {
+        margin: 0%;
+    }
+    .game h3 {
+        margin: 0%;
+    }
+    .game p {
+        margin: 0%;
+    }
+    .cards {
+        width: 100%;
+    }
+    .cards .cardsImg {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    }
+    .lifes {
+        width: 40%;
+        height: 30px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
