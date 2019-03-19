@@ -2159,23 +2159,7 @@ ICON HOVER SECTION
     display: none;
 }
 
-#igIconOverlay {
-  background: rgb(214, 36, 159, 0.2);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  z-index: 50;
-  display: none;
-}
-
 #fbIcon {
-    position: relative;
-    z-index: 60;
-}
-
-#igIcon {
     position: relative;
     z-index: 60;
 }
@@ -2183,12 +2167,6 @@ ICON HOVER SECTION
 #fbIcon:hover {
     color: #3b5998;
     background-color: #dfe3ee;
-}
-
-#igIcon:hover {
-    color: #ffffff;
-    background-color: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 .hoverInFb {
@@ -2219,30 +2197,101 @@ ICON HOVER SECTION
     }
 }
 
+#igIconOverlay {
+    background: rgb(214, 36, 159, 0.2);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 50;
+    display: none;
+}
+
+#igIcon {
+    position: relative;
+    z-index: 60;
+}
+
+#igIcon:hover {
+    color: #ffffff;
+    background-color: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
 .hoverInIg {
-  animation: igIn 1s;
+    animation: igIn 1s;
 }
 
 @keyframes igIn {
-  from {
-      background: rgba(255, 255, 255, 0);
-      border-radius: 100%;
-  }
-  to {
-      transform: scale(2);
-      background: rgb(214, 36, 159, 0.2);
-  }
+    from {
+        background: rgba(255, 255, 255, 0);
+        border-radius: 100%;
+    }
+    to {
+        transform: scale(2);
+        background: rgb(214, 36, 159, 0.2);
+    }
 }
 
 .hoverOutIg {
-  animation: igOut 1s;
+    animation: igOut 1s;
 }
 
 @keyframes igOut {
-  from {
-      background: rgb(214, 36, 159, 0.2);
-  }
-  to {
-      background: rgba(255, 255, 255, 0);
-  }
+    from {
+        background: rgb(214, 36, 159, 0.2);
+    }
+    to {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+#gitIconOverlay {
+    background: rgb(214, 36, 159, 0.2);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 50;
+    display: none;
+}
+
+#gitIcon {
+    position: relative;
+    z-index: 60;
+}
+
+#gitIcon:hover {
+    color: #ffffff;
+    background-color: #24292e;
+}
+
+.hoverInGit {
+    animation: gitIn 1s;
+}
+
+@keyframes gitIn {
+    from {
+        background: rgba(255, 255, 255, 0);
+        border-radius: 100%;
+    }
+    to {
+        transform: scale(2);
+        background: rgba(43, 49, 55, 0.5);
+    }
+}
+
+.hoverOutGit {
+    animation: gitOut 1s;
+}
+
+@keyframes gitOut {
+    from {
+        background: rgba(43, 49, 55, 0.5);
+    }
+    to {
+        background: rgba(255, 255, 255, 0);
+    }
 }

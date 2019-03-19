@@ -1,5 +1,6 @@
 var isHoverinInFacebook = false;
 var isHoverinInInstagram = false;
+var isHoverinInGitHub = false;
 
 $(function () {
 
@@ -51,8 +52,8 @@ $(function () {
             $("#fbIconOverlay").removeClass("hoverInFb")
             $("#fbIconOverlay").addClass("hoverOutFb")
             isHoverinInFacebook = false;
-            setTimeout(function(){
-                if(!isHoverinInFacebook){
+            setTimeout(function () {
+                if (!isHoverinInFacebook) {
                     $("#fbIconOverlay").css("display", "none");
                 }
             }, 1000);
@@ -70,12 +71,31 @@ $(function () {
             $("#igIconOverlay").removeClass("hoverInIg")
             $("#igIconOverlay").addClass("hoverOutIg")
             isHoverinInInstagram = false;
-            setTimeout(function(){
-                if(!isHoverinInInstagram){
+            setTimeout(function () {
+                if (!isHoverinInInstagram) {
                     $("#igIconOverlay").css("display", "none");
                 }
             }, 1000);
         }
     );
 
+    $("#gitIcon").hover(
+        function () {
+            $("#gitIconOverlay").css("display", "block");
+            $("#igIconOverlay").addClass("hoverInIg")
+            $("#gitIconOverlay").css("background", "rgba(43, 49, 55, 0.5)");
+            $("#gitIconOverlay").addClass("hoverInGit")
+            $("#gitIconOverlay").removeClass("hoverOutGit")
+            isHoverinInGitHub = true;
+        }, function () {
+            $("#gitIconOverlay").removeClass("hoverInGit")
+            $("#gitIconOverlay").addClass("hoverOutGit")
+            isHoverinInGitHub = false;
+            setTimeout(function () {
+                if (!isHoverinInGitHub) {
+                    $("#gitIconOverlay").css("display", "none");
+                }
+            }, 1000);
+        }
+    );
 });
