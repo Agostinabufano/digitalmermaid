@@ -1,6 +1,7 @@
 var isHoverinInFacebook = false;
 var isHoverinInInstagram = false;
 var isHoverinInGitHub = false;
+var isHoverinInLinkedin = false;
 
 $(function () {
 
@@ -94,6 +95,26 @@ $(function () {
             setTimeout(function () {
                 if (!isHoverinInGitHub) {
                     $("#gitIconOverlay").css("display", "none");
+                }
+            }, 1000);
+        }
+    );
+
+    $("#linIcon").hover(
+        function () {
+            $("#linIconOverlay").css("display", "block");
+            $("#igIconOverlay").addClass("hoverInIg")
+            $("#linIconOverlay").css("background", "rgba(40, 62, 74, 0.5)");
+            $("#linIconOverlay").addClass("hoverInLin")
+            $("#linIconOverlay").removeClass("hoverOutLin")
+            isHoverinInLinkedin = true;
+        }, function () {
+            $("#linIconOverlay").removeClass("hoverInLin")
+            $("#linIconOverlay").addClass("hoverOutLin")
+            isHoverinInLinkedin = false;
+            setTimeout(function () {
+                if (!isHoverinInLinkedin) {
+                    $("#linIconOverlay").css("display", "none");
                 }
             }, 1000);
         }
