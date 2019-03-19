@@ -3,6 +3,7 @@
 global.config = require('./config');
 var express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 var server = express();
 server.use(bodyParser.json());
@@ -12,11 +13,11 @@ server.use(bodyParser.urlencoded({
 server.use(express.static('public'));
 
 server.get('/', function (req, res) {
-    res.sendFile(__dirname + "/public/html/index.html");
+    res.sendFile(path.resolve(`${__dirname}/public/html/index.html`));
 });
 
 server.get('/memotest', function (req, res) {
-    res.sendFile(__dirname + "/public/html/memotest.html");
+    res.sendFile(path.resolve(`${__dirname}/public/html/memotest.html`));
 });
 
 server.listen(config.port, function (err) {
