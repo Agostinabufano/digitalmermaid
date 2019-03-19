@@ -1,3 +1,6 @@
+var isHoverinInFacebook = false;
+var isHoverinInInstagram = false;
+
 $(function () {
 
     // ---------------------------------------------- //
@@ -11,7 +14,6 @@ $(function () {
             $('nav').removeClass('sticky');
         }
     });
-
 
     // ---------------------------------------------- //
     // Scroll Spy
@@ -33,5 +35,47 @@ $(function () {
         }, 1000);
         e.preventDefault();
     });
+
+    $('#submitContactForm').on("click", function (e) {
+        toastr.success('Thank you for writing', 'Yay!')
+    });
+
+    $("#fbIcon").hover(
+        function () {
+            $("#fbIconOverlay").css("display", "block");
+            $("#fbIconOverlay").css("background", "rgba(139, 157, 195, 0.5)");
+            $("#fbIconOverlay").addClass("hoverInFb")
+            $("#fbIconOverlay").removeClass("hoverOutFb")
+            isHoverinInFacebook = true;
+        }, function () {
+            $("#fbIconOverlay").removeClass("hoverInFb")
+            $("#fbIconOverlay").addClass("hoverOutFb")
+            isHoverinInFacebook = false;
+            setTimeout(function(){
+                if(!isHoverinInFacebook){
+                    $("#fbIconOverlay").css("display", "none");
+                }
+            }, 1000);
+        }
+    );
+
+    $("#igIcon").hover(
+        function () {
+            $("#igIconOverlay").css("display", "block");
+            $("#igIconOverlay").css("background", "rgb(214, 36, 159, 0.2)");
+            $("#igIconOverlay").addClass("hoverInIg")
+            $("#igIconOverlay").removeClass("hoverOutIg")
+            isHoverinInInstagram = true;
+        }, function () {
+            $("#igIconOverlay").removeClass("hoverInIg")
+            $("#igIconOverlay").addClass("hoverOutIg")
+            isHoverinInInstagram = false;
+            setTimeout(function(){
+                if(!isHoverinInInstagram){
+                    $("#igIconOverlay").css("display", "none");
+                }
+            }, 1000);
+        }
+    );
 
 });
